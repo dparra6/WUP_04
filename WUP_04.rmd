@@ -51,11 +51,17 @@ basicCN <- ggplot(gssdata,aes(x=DEGREE,y=WORDSUM))
 basicCN + geom_boxplot()
 ```
 
-We can see on the chart that bachelor, graduate, and junior college are above and close together to 10.0. Having both high school's below the all three under 10.0. 
+We can see on the chart that bachelor, graduate, and junior college are above and close together to 10.0. Having both high school and LT high school, being below the all three under 10.0. 
 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+favstats(WORDSUM~DEGREE,data=gssdata)
+```
+
+For this chart we can try and see which one has a higher mean. We can see that Graduate has 10.0 mean while Junior College comes in second with a mean of 9.9 and Bachelor has a mean of 9.2. Having the two lowest being High school with 8.2 and LT High School with 7.7.  
 
 ## Inferential Results
 
